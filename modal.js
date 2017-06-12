@@ -84,3 +84,4 @@ var location5 = {
     }
   }
 };
+document.getElementById('test').innerHTML = location1.getCookieNeed();
