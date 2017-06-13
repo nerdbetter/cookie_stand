@@ -9,27 +9,24 @@ function randomCustomer(min,max){
 }
 function addToPage(){
   var newEl = document.createElement('h3');
-  newEl.textContent = this.location;
+  newEl.textContent = this.address;
   document.body.appendChild(newEl);
 }
 function getCookieNeed(){
   for (var i = 0; i < this.hoursOfOperation.length; i++){
     var cookies = randomCustomer(this.minCustomers,this.maxCustomers) * this.avgCookiePerSale;
-    console.log (cookies);
+    //console.log (cookies);
     this.cookiePerHour[i] = cookies;
-    console.log (this.cookiePerHour);
+    //console.log (this.cookiePerHour);
   }
 }
-function totalCookieSum(){
-  var calculatedSum = 0;
-  for(var i = 0; i < this.cookiePerHour.length; i++) {
-    var valueFromArray = this.cookiePerHour[i];
-    calculatedSum = sum(valueFromArray, calculatedSum)[0];
-  }
+totalCookieSum = function (){
+  var calculatedSum = 0; var i = this.cookiePerHour.length; while(i--) calculatedSum += this.cookiePerHour[i];
+  console.log(calculatedSum);
 }
 
 var location1 = {
-  location: 'First and Pike',
+  address: 'First and Pike',
   cookiePerHour:[],
   hoursOfOperation: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm' ],
   minCustomers: 23,
@@ -41,7 +38,7 @@ var location1 = {
 };
 
 var location2 = {
-  location: 'SeaTac Airport',
+  address: 'SeaTac Airport',
   cookiePerHour:[],
   hoursOfOperation: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm' ],
   minCustomers: 3,
@@ -52,7 +49,7 @@ var location2 = {
   editDoc:addToPage,
 };
 var location3 = {
-  location: 'Seattle Center',
+  address: 'Seattle Center',
   cookiePerHour:[],
   hoursOfOperation: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm' ],
   minCustomers: 11,
@@ -63,7 +60,7 @@ var location3 = {
   editDoc:addToPage,
 };
 var location4 = {
-  location: 'Capitol Hill',
+  address: 'Capitol Hill',
   cookiePerHour:[],
   hoursOfOperation: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm' ],
   minCustomers: 20,
@@ -74,7 +71,7 @@ var location4 = {
   editDoc:addToPage,
 };
 var location5 = {
-  location: 'Alki',
+  address: 'Alki',
   cookiePerHour:[],
   hoursOfOperation: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm' ],
   minCustomers: 2,
