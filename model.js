@@ -3,13 +3,15 @@
 function randomCustomer(min,max){
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-function CookieStore(location, minCustomers, maxCustomers, avgCookiePerSale ){
-  this.location = location;
+function CookieStore(address, minCustomers, maxCustomers, avgCookiePerSale ){
+  this.address = address;
   this.cookiePerHour = [];// can't get this to pass properly in totalCookieSum()
-  this.hoursOfOperation = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm' ];
+  this.hoursOfOperation = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm' ];
   this.minCustomers = minCustomers;
   this.maxCustomers = maxCustomers;
   this.avgCookiePerSale = avgCookiePerSale;
+  this.getCookieNeed();
+  this.totalCookieSum();
 }
 CookieStore.prototype.editDoc = function (){
   var newEl = document.createElement('h3');
@@ -20,7 +22,7 @@ CookieStore.prototype.getCookieNeed = function (){
   for (var i = 0; i < this.hoursOfOperation.length; i++){
     var cookies = randomCustomer( this.minCustomers , this.maxCustomers ) * this.avgCookiePerSale;
     //console.log (cookies);
-    this.cookiePerHour[i] = cookies;
+    this.cookiePerHour[i] = Math.round(cookies);
     //console.log (this.cookiePerHour);
   }
 };
@@ -35,25 +37,7 @@ var location3 = new CookieStore('Seattle Center', 11, 38, 3.7);
 var location4 = new CookieStore('Capitol Hill', 20, 38, 2.3);
 var location5 = new CookieStore('Alki', 2, 16, 4.6);
 
+var hours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm' ];
 var stores = [location1, location2, location3, location4, location5];
-location1.getCookieNeed();
-location1.totalCookieSum();
-location1.editDoc();
-
-location2.getCookieNeed();
-location2.totalCookieSum();
-location2.editDoc();
-
-location3.getCookieNeed();
-location3.totalCookieSum();
-location3.editDoc();
-
-location4.getCookieNeed();
-location4.totalCookieSum();
-location4.editDoc();
-
-location5.getCookieNeed();
-location5.totalCookieSum();
-location5.editDoc();
 
 console.log(stores);
