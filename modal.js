@@ -7,6 +7,26 @@ function sum(a,b){
 function randomCustomer(min,max){
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+function addToPage(){
+  var newEl = document.createElement('h3');
+  newEl.textContent = this.location;
+  document.body.appendChild(newEl);
+}
+function getCookieNeed(){
+  for (var i = 0; i < this.hoursOfOperation.length; i++){
+    var cookies = randomCustomer(this.minCustomers,this.maxCustomers) * this.avgCookiePerSale;
+    console.log (cookies);
+    this.cookiePerHour[i] = cookies;
+    console.log (this.cookiePerHour);
+  }
+}
+function totalCookieSum(){
+  var calculatedSum = 0;
+  for(var i = 0; i < this.cookiePerHour.length; i++) {
+    var valueFromArray = this.cookiePerHour[i];
+    calculatedSum = sum(valueFromArray, calculatedSum)[0];
+  }
+}
 
 var location1 = {
   location: 'First and Pike',
@@ -15,30 +35,11 @@ var location1 = {
   minCustomers: 23,
   maxCustomers: 65,
   avgCookiePerSale: 6.3,
-  addToPage: function(){
-    var newEl = document.createElement('h3');
-    var newText = document.createTextNode(this.location);
-    var position = document.getElementsByTagName('body')[0];
-    position.appendChild(newEl);
-  },
-
-  getCookieNeed: function(){
-    for (var i = 0; i < this.hoursOfOperation.length; i++){
-      var cookies = randomCustomer(this.minCustomers,this.maxCustomers) * this.avgCookiePerSale;
-      console.log (cookies);
-      this.cookiePerHour[i] = cookies;
-      console.log (this.cookiePerHour);
-    }
-  },
-  totalCookieSum: function(){
-    var calculatedSum = 0;
-    for(var i = 0; i < this.cookiePerHour.length; i++) {
-      var valueFromArray = this.cookiePerHour[i];
-      calculatedSum = sum(valueFromArray, calculatedSum)[0];
-    }
-    return calculatedSum;
-  }
+  neededcookies:getCookieNeed,
+  cookieTotal:totalCookieSum,
+  editDoc:addToPage,
 };
+
 var location2 = {
   location: 'SeaTac Airport',
   cookiePerHour:[],
@@ -46,21 +47,9 @@ var location2 = {
   minCustomers: 3,
   maxCustomers: 24,
   avgCookiePerSale: 1.2,
-  addToPage: function(){
-    var newEl = document.createElement('h3');
-    var newText = document.createTextNode(this.location);
-    var position = document.getElementsByTagName('body')[1];
-    position.appendChild(newEl);
-  },
-
-  getCookieNeed: function(){
-    for (var i = 0; i < this.hoursOfOperation.length; i++){
-      var cookies = randomCustomer(this.minCustomers,this.maxCustomers) * this.avgCookiePerSale;
-      console.log (cookies);
-      this.cookiePerHour[i] = cookies;
-      console.log (this.cookiePerHour);
-    }
-  }
+  neededcookies:getCookieNeed,
+  cookieTotal:totalCookieSum,
+  editDoc:addToPage,
 };
 var location3 = {
   location: 'Seattle Center',
@@ -69,21 +58,9 @@ var location3 = {
   minCustomers: 11,
   maxCustomers: 38,
   avgCookiePerSale: 3.7,
-  addToPage: function(){
-    var newEl = document.createElement('h3');
-    var newText = document.createTextNode(this.location);
-    var position = document.getElementsByTagName('body')[2];
-    position.appendChild(newEl);
-  },
-
-  getCookieNeed: function(){
-    for (var i = 0; i < this.hoursOfOperation.length; i++){
-      var cookies = randomCustomer(this.minCustomers,this.maxCustomers) * this.avgCookiePerSale;
-      console.log (cookies);
-      this.cookiePerHour[i] = cookies;
-      console.log (this.cookiePerHour);
-    }
-  }
+  neededcookies:getCookieNeed,
+  cookieTotal:totalCookieSum,
+  editDoc:addToPage,
 };
 var location4 = {
   location: 'Capitol Hill',
@@ -92,21 +69,9 @@ var location4 = {
   minCustomers: 20,
   maxCustomers: 38,
   avgCookiePerSale: 2.3,
-  addToPage: function(){
-    var newEl = document.createElement('h3');
-    var newText = document.createTextNode(this.location);
-    var position = document.getElementsByTagName('body')[3];
-    position.appendChild(newEl);
-  },
-
-  getCookieNeed: function(){
-    for (var i = 0; i < this.hoursOfOperation.length; i++){
-      var cookies = randomCustomer(this.minCustomers,this.maxCustomers) * this.avgCookiePerSale;
-      console.log (cookies);
-      this.cookiePerHour[i] = cookies;
-      console.log (this.cookiePerHour);
-    }
-  }
+  neededcookies:getCookieNeed,
+  cookieTotal:totalCookieSum,
+  editDoc:addToPage,
 };
 var location5 = {
   location: 'Alki',
@@ -115,23 +80,28 @@ var location5 = {
   minCustomers: 2,
   maxCustomers: 16,
   avgCookiePerSale: 4.6,
-  addToPage: function(){
-    var newEl = document.createElement('h3');
-    var newText = document.createTextNode(this.location);
-    var position = document.getElementsByTagName('body')[4];
-    position.appendChild(newEl);
-  },
-
-  getCookieNeed: function(){
-    for (var i = 0; i < this.hoursOfOperation.length; i++){
-      var cookies = randomCustomer(this.minCustomers,this.maxCustomers) * this.avgCookiePerSale;
-      console.log (cookies);
-      this.cookiePerHour[i] = cookies;
-      console.log (this.cookiePerHour);
-    }
-  }
+  neededcookies:getCookieNeed,
+  cookieTotal:totalCookieSum,
+  editDoc:addToPage,
 };
+var storeModel = [ location1, location2, location3, location4, location5 ];
 
-location1.getCookieNeed();
-location1.addToPage();
-location1.totalCookieSum();
+location1.neededcookies();
+location1.cookieTotal();
+location1.editDoc();
+
+location2.neededcookies();
+location2.cookieTotal();
+location2.editDoc();
+
+location3.neededcookies();
+location3.cookieTotal();
+location3.editDoc();
+
+location4.neededcookies();
+location4.cookieTotal();
+location4.editDoc();
+
+location5.neededcookies();
+location5.cookieTotal();
+location5.editDoc();
