@@ -27,7 +27,16 @@ function totalCookieSum(){
     calculatedSum = sum(valueFromArray, calculatedSum)[0];
   }
 }
-
+function CookieStore(location, cookiesPerHour, hoursOfOperation, minCustomers, maxCustomers, avgCookiePerSale ){
+  this.location = location;
+  this.minCustomers = minCustomers;
+  this.maxCustomers = maxCustomers;
+  this.cookiePerHour = cookiePerHour;
+  this.hours = hoursOfOperation || ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm' ]; //can use operators
+}
+CookieStore.prototype.getCookieNeed = neededcookies;
+CookieStore.prototype.totalCookieSum = cookieTotal;
+CookieStore.prototype.editDoc = addToPage;
 var location1 = {
   location: 'First and Pike',
   cookiePerHour:[],
