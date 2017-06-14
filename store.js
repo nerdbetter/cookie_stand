@@ -9,11 +9,11 @@ for (var k = 0; k < hours.length; k++) {
 function addTimeRow(storeTimeContainer, time) {
   var storeTimeCell = document.createElement('td');
   storeTimeCell.textContent = time;
-  //storeTimeCell.setAttribute('colspan', 2);
   storeTimeContainer.appendChild(timeRow);
   timeRow.appendChild(storeTimeCell);
 }
 //function to add address and cookies
+
 var storeLocationsContainer = document.getElementById('store-locations');
 console.log(storeLocationsContainer);
 
