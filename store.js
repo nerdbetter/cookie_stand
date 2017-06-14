@@ -13,8 +13,8 @@ CookieStore.prototype.render = function (){
     storeTimeContainer.appendChild(timeRow);
     timeRow.appendChild(storeTimeCell);
   }
-  //function to add address and cookies
 
+  //function to add address and cookies
   var storeLocationsContainer = document.getElementById('store-locations');
   console.log(storeLocationsContainer);
 
