@@ -4,7 +4,7 @@ header{
   max-width: 1500px;
   max-height: 200px;
   margin: auto;
-  background-color: #737373;
+  background-color: white;
 }
 .headNav{
   width: 32%;
@@ -32,7 +32,7 @@ a{
   text-decoration: none;
 }
 .mainSlideShow{
-  max height: 400px;
+  max height: 300px;
   width width: 1500;
   height: 100%;
   width: 100%;
@@ -41,4 +41,33 @@ a{
   background-position: center top;
   padding top: 20px;
   margin: 0px;
+  border-radius: 10%;
+  overflow: hidden;
+}
+.asideDiv{
+  max-width: 1500px;
+  max-height: 400px;
+  width: 100%;
+}
+aside{
+  max height: 300px;
+  max width: 375px;
+  height: 100%;
+  width: 100%;
+  background-color: skyblue;
+  border-radius: 5%
+}
+.dealDiv{
+  max height: 300px;
+  max width: 750px;
+  height: 100%;
+  width: 100%;
+  background-color: skyblue;
+  border-radius: 5%
+}
+.menuDiv{
+  float:left;
+}
+.locationDiv{
+  float:right;
 }
