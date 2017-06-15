@@ -1,6 +1,3 @@
-* {
-  outline: 1px solid black;
-}
 header{
   width:100%;
   height: 100%;
@@ -18,9 +15,30 @@ header{
   width: 32%;
   height: 100%;
   float: left;
+  background-image: url(images/salmon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 .headNav2{
   width: 32%;
   height: 100%;
   float: right;
+}
+header li{
+  display: inline-block;
+}
+a{
+  text-decoration: none;
+}
+.mainSlideShow{
+  max height: 400px;
+  width width: 1500;
+  height: 100%;
+  width: 100%;
+  background-image: url(images/storefront.JPG); background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  padding top: 20px;
+  margin: 0px;
 }
