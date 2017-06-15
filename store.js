@@ -1,49 +1,40 @@
 // functions to get time to add
-CookieStore.prototype.render = function (){
-  var storeTimeContainer = document.getElementById('storeTimes');
+CookieStore.prototype.timeBar = function (){
   var timeRow = document.createElement('tr');
-  for (var k = 0; k < hours.length; k++) {
-    var time = hours[k];
-    console.log(time);
-    addTimeRow(storeTimeContainer, time);
+  var storeTimeContainer = document.getElementById('storeTimes');
+  storeTimeContainer.appendChild(timeRow);
+  var blankCell = document.createElement('td');
+  timeRow.appendChild(blankCell);
+  timeRow.appendChild(blankCell);
+  for (var k = 0; k < this.hoursOfOperation.length; k++) {
+    var time = this.hoursOfOperation[k];
+    var newTime =  document.createElement('td');
+    var newTimeText = document.createTextNode(time);
+    newTime.appendChild(newTimeText);
+    timeRow.appendChild(newTime);
   }
-  function addTimeRow(storeTimeContainer, time) {
-    var storeTimeCell = document.createElement('td');
-    storeTimeCell.textContent = time;
-    storeTimeContainer.appendChild(timeRow);
-    timeRow.appendChild(storeTimeCell);
-  }
-  //function to add address and cookies
+};
+location1.timeBar();
 
-  var storeLocationsContainer = document.getElementById('store-locations');
-  console.log(storeLocationsContainer);
+CookieStore.prototype.render = function (){
+  var newAddress = document.createElement('td');
+  var addressText = document.createTextNode(this.address);
+  newAddress.appendChild(addressText);
+  var newRow = document.createElement('tr');
+  newRow.appendChild(newAddress);
+  var tableContainer = document.getElementsByTagName('tbody')[0];
+  tableContainer.appendChild(newRow);
 
-  for (var i = 0; i < stores.length; i++) {
-    var store = stores[i];
-    console.log(store);
-    addStoreRow(storeLocationsContainer, store);
-  }
-
-  function addStoreRow(container, store) {
-    var storeRow = document.createElement('tr');
-    var storeNameCell = document.createElement('td');
-    storeNameCell.textContent = store.address;
-    storeNameCell.setAttribute('colspan', 2);
-    storeRow.appendChild(storeNameCell);
-    addCellForEachHour(storeRow, store.cookiePerHour);
-    container.appendChild(storeRow);
-    //trying to add total column
-    var storeTotalSum = document.createElement('td');
-    storeTotalSum.textContent = store.totalCookieSum;
-    storeRow.appendChild(storeTotalSum);
-  }
-
-  function addCellForEachHour(row, cookiePerHour) {
-    for (var j = 0; j < cookiePerHour.length; j++) {
-      var hourCell = document.createElement('td');
-      hourCell.textContent = cookiePerHour[j];
-      row.appendChild(hourCell);
-    }
+  for ( i = 0; i < this.cookiePerHour.length; i++ ){
+    var cookies = this.cookiePerHour[i];
+    var newCookiePerHour = document.createElement('td');
+    var cookiePerHourText = document.createTextNode(cookies);
+    newCookiePerHour.appendChild(cookiePerHourText);
+    newRow.appendChild(newCookiePerHour);
   }
 };
 location1.render();
+location2.render();
+location3.render();
+location4.render();
+location5.render();

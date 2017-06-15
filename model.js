@@ -13,11 +13,6 @@ function CookieStore(address, minCustomers, maxCustomers, avgCookiePerSale ){
   this.getCookieNeed();
   this.totalCookieSum();
 }
-/*CookieStore.prototype.editDoc = function (){
-  var newEl = document.createElement('h3');
-  newEl.textContent = this.location;
-  document.body.appendChild(newEl);
-};*/ // not needed but saving in case I need later.
 CookieStore.prototype.getCookieNeed = function (){
   for (var i = 0; i < this.hoursOfOperation.length; i++){
     var cookies = randomCustomer( this.minCustomers , this.maxCustomers ) * this.avgCookiePerSale;

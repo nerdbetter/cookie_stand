@@ -7,11 +7,26 @@
     <link href="formstyles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <form class='formDiv'>
+      <fieldset class='storeAdd'>
+        <legend> Add Store Data </legend>
+        <label>Address</br>
+        <input type='text' name ='address'/></label></br>
+        <label>Minimum Customer Count</br>
+        <input type='text' name ='minCust'/></label></br>
+        <label>Maximum Customer Count</br>
+        <input type='text' name ='maxCust'/></label></br>
+        <label>Average Cookies Per Sale</br>
+        <input type='text' name ='avgCookie'/></label></br>
+        <input type='submit' name='submit' value='Submit Store Data' />
+      </fieldset>
+    </form >
     <table>
       <thead id ='storeTimes'></thead>
       <tbody id ='store-locations'></tbody>
     </table>
     <script src="model.js"></script>
     <script src="store.js"></script>
+    <script src="index.js"/></script>
   </body>
 </html>
