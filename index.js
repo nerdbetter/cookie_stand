@@ -15,23 +15,5 @@ function formSubmit(event){
 
   var newLocation = new CookieStore( address.value, minCustomers.value, maxCustomers.value, avgCookiePerSale.value );
   console.log (newLocation);
+  newLocation.render();
 };
-CookieStore.prototype.render = function (){
-  var newAddress = document.createElement('td');
-  var addressText = document.createTextNode(this.address);
-  newAddress.appendChild(addressText);
-  var addressContainer = document.getElementsByTagName('tbody')[0];
-  addressContainer.setAttribute('colspan', 2);
-  addressContainer.appendChild(newAddress);
-
-  for ( i = 0; i < this.cookiePerHour.length; i++ ){
-    var cookies = this.cookiePerHour[i];
-    var newCookiePerHour = document.createElement('td');
-    var cookiePerHourText = document.createTextNode(cookies);
-    newCookiePerHour.appendChild(cookiePerHourText);
-    var cookieJar = document.getElementsByTagName('tbody');
-    cookieJar.appendChild(newCookiePerHour);
-  }
-};
-location1.render();
-location2.render();
