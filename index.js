@@ -6,17 +6,32 @@ function formSubmit(event){
   event.preventDefault();
   var address = document.querySelector('input[name="address"]');
   console.log(address.value);
-  var minCust = document.querySelector('input[name="minCust"]');
-  console.log(minCust.value);
-  var maxCust = document.querySelector('input[name="maxCust"]');
-  console.log(maxCust.value);
-  var avgCookie = document.querySelector('input[name="avgCookie"]');
-  console.log(avgCookie.value);
+  var minCustomers = document.querySelector('input[name="minCust"]');
+  console.log(minCustomers.value);
+  var maxCustomers = document.querySelector('input[name="maxCust"]');
+  console.log(maxCustomers.value);
+  var avgCookiePerSale = document.querySelector('input[name="avgCookie"]');
+  console.log(avgCookiePerSale.value);
 
-  var newAddressRow = document.createElement('tr');
-  var newAddress = document.createElement('td');
-  newAddress.textContent = address;
-  newAddress.appendChild(address);
-  var addressContainer = document.getElementsByTagName('td'[0]);
-  newAddressRow.appendChild(newAddress);
+  var newLocation = new CookieStore( address.value, minCustomers.value, maxCustomers.value, avgCookiePerSale.value );
+  console.log (newLocation);
 };
+CookieStore.prototype.render = function (){
+  var newAddress = document.createElement('td');
+  var addressText = document.createTextNode(this.address);
+  newAddress.appendChild(addressText);
+  var addressContainer = document.getElementsByTagName('tbody')[0];
+  addressContainer.setAttribute('colspan', 2);
+  addressContainer.appendChild(newAddress);
+
+  for ( i = 0; i < this.cookiePerHour.length; i++ ){
+    var cookies = this.cookiePerHour[i];
+    var newCookiePerHour = document.createElement('td');
+    var cookiePerHourText = document.createTextNode(cookies);
+    newCookiePerHour.appendChild(cookiePerHourText);
+    var cookieJar = document.getElementsByTagName('tbody');
+    cookieJar.appendChild(newCookiePerHour);
+  }
+};
+location1.render();
+location2.render();
