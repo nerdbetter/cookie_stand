@@ -4,29 +4,48 @@
 
     <title>Salmon Cookies</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="formstyles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Mogra|Palanquin+Dark" rel="stylesheet">
   </head>
   <body>
-    <form class='formDiv'>
-      <fieldset class='storeAdd'>
-        <legend> Add Store Data </legend>
-        <label>Address</br>
-        <input type='text' name ='address'/></label></br>
-        <label>Minimum Customer Count</br>
-        <input type='number' step='1' name ='minCust'/></label></br>
-        <label>Maximum Customer Count</br>
-        <input type='number' step='1' name ='maxCust'/></label></br>
-        <label>Average Cookies Per Sale</br>
-        <input type='number' step='1' name ='avgCookie'/></label></br>
-        <input type='submit' name='submit' value='Submit Store Data' />
-      </fieldset>
-    </form >
-    <table>
-      <thead id ='storeTimes'></thead>
-      <tbody id ='store-locations'></tbody>
-    </table>
-    <script src="model.js"></script>
-    <script src="store.js"></script>
-    <script src="index.js"/></script>
+    <div class = 'mainWrapper'>
+      <header>
+          <div class='headNav'>
+            <ul style="list-style: none;">
+              <li><a href='index.html'>Home</a></li>
+              <li><a href='menu.html'>Menu</a></li>
+            </ul>
+          </div>
+          <div class ='headLogo'> <h1>Salmon Cookies</h1>
+          </div>
+          <div class= 'headNav2'>
+            <ul style="list-style: none;">
+              <li><a href='store.html'>Find a Store</a></li>
+              <li><a a href='contact.html'>Contact</a></li>
+            </ul>
+          </div>
+        </header>
+        <form class='formDiv'>
+          <fieldset class='storeAdd'>
+            <legend> Add Store Data </legend>
+            <label>Address</br>
+            <input type='text' name ='address'/></label></br>
+            <label>Minimum Customer Count</br>
+            <input type='number' step='1' name ='minCust'/></label></br>
+            <label>Maximum Customer Count</br>
+            <input type='number' step='1' name ='maxCust'/></label></br>
+            <label>Average Cookies Per Sale</br>
+            <input type='number' step='1' name ='avgCookie'/></label></br>
+            <input type='submit' name='submit' value='Submit Store Data' />
+          </fieldset>
+        </form >
+        <table>
+          <thead id ='storeTimes'></thead>
+          <tbody id ='store-locations'></tbody>
+        </table>
+        <script src="model.js"></script>
+        <script src="store.js"></script>
+        <script src="index.js"/></script>
+    </div>
   </body>
+  <footer><p>&copy; nerdbetter.com <p></footer>
 </html>

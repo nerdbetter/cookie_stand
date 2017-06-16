@@ -6,6 +6,7 @@ header{
   margin: auto;
   background: rgba(64, 194, 191, 0.8);
   border-radius: 5%;
+  box-shadow: inset 0px 0px 0px 3px rgba(0,0,0,1);
 }
 .headNav{
   width: 32%;
@@ -26,14 +27,14 @@ header{
   background-position: center center;
   font-family: 'Mogra', cursive;
   text-align: center;
-  padding-top:50px;
+  padding-top:0px;
   color: white;
   text-shadow:
    -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
      1px 1px 0 #000;
-  font-size: 60px;
+  font-size: 30px;
 
 }
 .headNav2{
@@ -59,6 +60,9 @@ a{
   font-size: 30px;
   font-family: 'Mogra', cursive;
 }
+a:hover{
+  color: black;
+}
 body{
   max-width:2000px;
   max-height: 1500px;
@@ -66,9 +70,22 @@ body{
   background-image: url(images/fish.jpg);
   background-repeat: repeat;
 }
+h3{
+  color: #00ffff;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  font-size: 30px;
+  font-family: 'Mogra', cursive;
+  margin-bottom: 0px;
+}
 .mainWrapper{
   max-width:2000px;
-  max-height: 1500px;
+  max-height: 2000px;
+  height: 1500px;
+  width: 100%;
   background: rgba(134, 89, 45, 0.5)
 }
 .mainBodyDiv{
@@ -87,11 +104,12 @@ body{
   margin: auto;
   border-radius: 5%;
   box-sizing:border-box;
+  box-shadow: inset 0px 0px 0px 3px rgba(0,0,0,1);
 
 }
 .asideDiv{
   max-width: 1000px;
-  height: 300px;
+  height: 500px;
   width: 100%;
   margin: auto;
 }
@@ -103,7 +121,17 @@ aside{
   background: rgba(64, 194, 191, 0.8);
   border-radius: 5%;
   margin: auto;
+  box-shadow: inset 0px 0px 0px 3px rgba(0,0,0,1);
 
+}
+.dealDiv h1{
+  font-size: 60px;
+  margin-bottom: 0px;
+}
+.dealDiv h2{
+  font-size: 60px;
+  padding-bottom: 30px;
+  margin-top: 0px;
 }
 .dealDiv{
   max height: 300px;
@@ -116,17 +144,46 @@ aside{
   float: left;
   border: 20px;
   background: rgba(64, 194, 191, 0.8);
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  font-size: 25px;
+  font-family: 'Mogra', cursive;
+  text-align: center;
+  box-shadow: inset 0px 0px 0px 3px rgba(0,0,0,1);
 
 }
 .menuDiv{
   float:left;
   margin: auto;
   background-size: cover;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  font-size: 25px;
+  font-family: 'Mogra', cursive;
+  line-height: 200%;
 
 }
 .locationDiv{
   float: right;
   margin: auto;
+  text-decoration: none;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  font-size: 25px;
+  font-family: 'Mogra', cursive;
+  line-height: 200%;
 }
 footer{
   height: 100px;
@@ -134,4 +191,70 @@ footer{
   margin: auto;
   background: rgba(64, 194, 191, 0.8);
   border-radius: 5%;
+  font-size: 30px;
+  font-family: 'Palanquin Dark', sans-serif;
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+  box-shadow: inset 0px 0px 0px 3px rgba(0,0,0,1);
+}
+/* formstyle */
+form{
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  font-size: 25px;
+  font-family: 'Mogra', cursive;
+  outline: 1px solid black;
+  font-size: 30px;
+}
+fieldset{
+  background: rgba(134, 89, 45, 0.5);
+  width: 1000px;
+  margin: auto;
+}
+table{
+  color: white;
+  background-color: grey;
+  border-collapse: separate;
+  empty-cells: hide;
+  height:400px;
+  width:100%;
+  margin: auto;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  font-size: 20px;
+  font-family: 'Palanquin Dark', sans-serif;
+  float: left;
+}
+tr{
+  outline: 1px solid black;
+}
+td{
+  outline: 1px solid black;
+  text-align: center;
+
+}
+thead{
+  outline: 1px solid black;
+  background-color: rgb(64, 194, 191);
+
+}
+tbody{
+  outline: 1px solid black;
+}
+body{
+  background-color: white;
+}
+tr:nth-child(even) {
+  background-color: tan;
+}
+tr:hover {
+  background-color: #f5f5f5
 }
