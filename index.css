@@ -1,15 +1,20 @@
 header{
   width:100%;
   height: 100%;
-  max-width: 1500px;
+  max-width: 1000px;
   max-height: 200px;
   margin: auto;
-  background-color: white;
+  background: rgba(64, 194, 191, 0.8);
+  border-radius: 5%;
 }
 .headNav{
   width: 32%;
   height: 100%;
   float:left;
+  padding-top: 20px;
+  line-height: 500%;
+  text-align: left;
+
 }
 .headLogo{
   width: 32%;
@@ -19,55 +24,114 @@ header{
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
+  font-family: 'Mogra', cursive;
+  text-align: center;
+  padding-top:50px;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  font-size: 60px;
+
 }
 .headNav2{
   width: 32%;
   height: 100%;
   float: right;
+  padding-top: 20px;
+  padding-right: 40px;
+  line-height: 500%;
+  text-align: right;
 }
 header li{
-  display: inline-block;
+
 }
 a{
   text-decoration: none;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  font-size: 30px;
+  font-family: 'Mogra', cursive;
+}
+body{
+  max-width:2000px;
+  max-height: 1500px;
+  background-color: #c68c53;
+  background-image: url(images/fish.jpg);
+  background-repeat: repeat;
+}
+.mainWrapper{
+  max-width:2000px;
+  max-height: 1500px;
+  background: rgba(134, 89, 45, 0.5)
+}
+.mainBodyDiv{
+  width:auto;
+  height:400px;
 }
 .mainSlideShow{
   max height: 300px;
-  width width: 1500;
+  max-width: 1000px;
   height: 100%;
   width: 100%;
-  background-image: url(images/storefront.JPG); background-repeat: no-repeat;
-  background-size: contain;
+  background-image: url(images/storefront.JPG);
+  background-size: cover;
   background-position: center top;
-  padding top: 20px;
-  margin: 0px;
-  border-radius: 10%;
-  overflow: hidden;
+  padding top: 0px;
+  margin: auto;
+  border-radius: 5%;
+  box-sizing:border-box;
+
 }
 .asideDiv{
-  max-width: 1500px;
-  max-height: 400px;
+  max-width: 1000px;
+  height: 300px;
   width: 100%;
+  margin: auto;
 }
 aside{
   max height: 300px;
   max width: 375px;
   height: 100%;
-  width: 100%;
-  background-color: skyblue;
-  border-radius: 5%
+  width: 25%;
+  background: rgba(64, 194, 191, 0.8);
+  border-radius: 5%;
+  margin: auto;
+
 }
 .dealDiv{
   max height: 300px;
-  max width: 750px;
+  max width: 700px;
   height: 100%;
-  width: 100%;
-  background-color: skyblue;
-  border-radius: 5%
+  width: 50%;
+  background-color:  #99ffff;
+  border-radius: 5%;
+  margin: auto;
+  float: left;
+  border: 20px;
+  background: rgba(64, 194, 191, 0.8);
+
 }
 .menuDiv{
   float:left;
+  margin: auto;
+  background-size: cover;
+
 }
 .locationDiv{
-  float:right;
+  float: right;
+  margin: auto;
+}
+footer{
+  height: 100px;
+  width: 1000px;
+  margin: auto;
+  background: rgba(64, 194, 191, 0.8);
+  border-radius: 5%;
 }
