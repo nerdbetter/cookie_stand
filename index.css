@@ -15,6 +15,7 @@ header{
   padding-top: 20px;
   line-height: 500%;
   text-align: left;
+  overflow: hidden;
 
 }
 .headLogo{
@@ -45,6 +46,7 @@ header{
   padding-right: 40px;
   line-height: 500%;
   text-align: right;
+  overflow: hidden;
 }
 header ul{
   margin-bottom: 0px;
@@ -264,15 +266,15 @@ tr:hover {
   padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 45px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }
 .next {
-  right: 0;
+  right: 25%;
   border-radius: 3px 0 0 3px;
 }
 .prev{
-  left: 0;
+  left: 25%;
   border-radius: 3px 0 0 3px;
 }
